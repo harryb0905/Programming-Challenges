@@ -84,8 +84,18 @@ def q12():
 			results.append(str(num))
 	print(','.join(results))
 
+def q13():
+	letters = digits = 0
+	for word in input("Enter sentence > ").split():
+		for ch in word:
+			if ch.isalpha():
+				letters += 1
+			elif ch.isdigit():
+				digits += 1
+	print("LETTERS", letters, "\nDIGITS", digits)
+
 def main():
-	q12()
+	q13()
 
 if __name__ == "__main__":
 	main()
